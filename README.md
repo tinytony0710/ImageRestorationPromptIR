@@ -86,7 +86,7 @@ python main.py <data-directory> [options]
 **Example Command (Configuration yielding best result):**
 
 ```bash
-python main.py /path/to/your/data --epoch 12 --scheduler-step 3 --batch 1 --seed 774 --predict-instance-num 256 --model-version 'v1'
+python main.py /path/to/your/data --epoch 12 --batch 4 --seed 42 --optimizer 'AdamW' --lr 0.0001 --weight-decay 0.01
 ```
 The program will run training, validation and testing individually. The submission file for the test dataset will be saved as `test-results.json`.
 
