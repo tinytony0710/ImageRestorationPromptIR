@@ -63,13 +63,15 @@ python main.py <data-directory> [options]
 
 **Options:**
 
-* `--model-version`: Choose v1 (maskrcnn_resnet50_fpn) and v2 (maskrcnn_resnet50_fpn_v2). Default='v1'.
+* `--depthwise-separable`: Enable depthwise separable conv for a little bit faster training.
 
-* `--freeze`: The number of layers you DON'T WANT to freeze. Default=3, integer between 1 to 6.
+* `--loss-fn`: Choose l1 (nn.L1Loss) and l2 (nn.MSELoss). Default='l1'.
 
-* `--instance-num`: Maximum number of instances to predict per image during inference. Default=100.
+* `--optimizer`: Choose ```SGD``` and ```AdamW```. Default='SGD'.
 
 * `--lr`: Learning rate. Default=0.0002
+
+* `--weight-decay`: Weight decay. Default=0.0005
 
 * `--scheduler-step`: Step size for the learning rate scheduler. Default=5
 
@@ -90,8 +92,4 @@ The program will run training, validation and testing individually. The submissi
 
 ## Results
 
-Val AP@0.50-0.95: 0.35
-
-Val AP@0.50: 0.50
-
-Test AP@0.50-0.95: 0.4054
+Test PSNR: 0.28
