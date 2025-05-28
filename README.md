@@ -2,14 +2,13 @@
 
 ## Introduction
 
-A fine-tuned over both pretrained `maskrcnn_resnet50_fpn` and `maskrcnn_resnet50_fpn_v2` model for 4 types of cell instances segmentation.
+A "All-in One" model by PromptIR for rain or snow degraded image restoration.
 
 ## Environment
 
-On colab: Should be able to train with batch size 1 and 700 instances per images, and inference 256 instances per images.
+On colab: Should be able to train with batch size 4.
 
-but there are the used lib:
-
+And there are the used lib:
 ```
 einops==0.8.1
 fonttools==4.58.0
@@ -22,6 +21,17 @@ scikit-image==0.25.2
 torch==2.7.0
 torchvision==0.22.0
 tqdm==4.67.1
+```
+
+## Install
+
+1. download
+2. upload to colab
+3. download the dataset
+4. upload and name it as ```dataset```
+5. run the following command:
+```bash
+!python3 main.py ../dataset
 ```
 
 ## Usage
